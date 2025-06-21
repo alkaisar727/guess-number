@@ -1,22 +1,35 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guess Game</title>
     <link rel="stylesheet" href="style..css">
 </head>
-<div>
-    <div class="container">
-        <h1>Guss The numper</h1>
-        <p>I'am thinking of a number between <b>1 and 100</b> can you guss it</p>
+<body>
+<div class="container">
+    <h1>Guess The Number</h1>
+    <p>I'm thinking of a number between <b>1 and 100</b>. Can you guess it?</p>
+
     <div class="game">
-        <input id="guessinput" type="number" placeholder="your Guss...">
-        <button id="guessbutton">Guss : 1$</button>
-    </div>
-    <p id="message"></p>
+        <input id="guessinput" type="number" placeholder="Your Guess...">
+        
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="alkaisar573@gmail.com"> <!-- ✏️ غيره لبريدك -->
+            <input type="hidden" name="item_name" value="Guess Game Try">
+            <input type="hidden" name="amount" value="1.00">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="return" value="https://alkaisar727.github.io/guess-number/"> <!-- ✏️ رابط اللعبة بعد الدفع -->
+            <input id="guessbutton" type="submit" value="Guess : 1$">
+        </form>
     </div>
 
-    <script src="script.js"></script>
+    <p id="message"></p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
